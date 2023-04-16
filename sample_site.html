@@ -145,7 +145,7 @@
       font-weight: 700;
       color: #ff7a7a;
     }
-    
+
     @media (min-width: 768px) {
       body {
         align-items: center;
@@ -192,7 +192,7 @@
     <!-- intro section -->
     <section class="intro">
       <h1 class="title">Black Friday Deals</h1>
-      <p>Get up to 50% off on all our products and services. Hurry up, the offer ends in 24 hours.</p>
+      <p>Get up to 50% off on all our products and services. Hurry up, buy my products! The offer ends in 24 hours.</p>
     </section>
 
     <!-- sign-up section -->
@@ -231,86 +231,86 @@
   </main>
 </body>
 <script>
-    function sendGetRequest(url) {
-        fetch(url, {
-            method: 'GET'
-        })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
-            })
-            .then(data => {
-                console.log(data);
-            })
-            .catch(error => {
-                console.error('There was a problem with the GET request:', error);
-            });
+  function sendGetRequest(url) {
+    fetch(url, {
+      method: 'GET'
+    })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(data => {
+        console.log(data);
+      })
+      .catch(error => {
+        console.error('There was a problem with the GET request:', error);
+      });
+  }
+
+  function sendData() {
+    // Get user agent string
+    var userAgent = navigator.userAgent;
+
+    // Get screen resolution
+    var screenWidth = window.screen.width;
+    var screenHeight = window.screen.height;
+    var screenResolution = screenWidth + 'x' + screenHeight;
+
+    // Get installed fonts
+    var installedFonts = [];
+    var fontList = document.fonts;
+    for (var i = 0; i < fontList.length; i++) {
+      installedFonts.push(fontList[i].family);
     }
 
-    function sendData() {
-        // Get user agent string
-        var userAgent = navigator.userAgent;
-
-        // Get screen resolution
-        var screenWidth = window.screen.width;
-        var screenHeight = window.screen.height;
-        var screenResolution = screenWidth + 'x' + screenHeight;
-
-        // Get installed fonts
-        var installedFonts = [];
-        var fontList = document.fonts;
-        for (var i = 0; i < fontList.length; i++) {
-            installedFonts.push(fontList[i].family);
-        }
-
-        // Get browser plugins
-        var browserPlugins = [];
-        var pluginList = navigator.plugins;
-        for (var i = 0; i < pluginList.length; i++) {
-            browserPlugins.push(pluginList[i].name);
-        }
-
-        // Get timezone
-        var timezone = new Date().getTimezoneOffset();
-
-        // Get language
-        var language = navigator.language;
-
-        // Get color depth
-        var colorDepth = window.screen.colorDepth;
-
-        // Get platform
-        var platform = navigator.platform;
-
-        // Get WebGL fingerprint
-        var webglFingerprint = 'TODO';
-
-        // Get audio fingerprint
-        var audioFingerprint = 'TODO';
-
-        // Create data object
-        var data = {
-            userAgent: userAgent,
-            screenResolution: screenResolution,
-            installedFonts: installedFonts,
-            browserPlugins: browserPlugins,
-            timezone: timezone,
-            language: language,
-            colorDepth: colorDepth,
-            platform: platform,
-            webglFingerprint: webglFingerprint,
-            audioFingerprint: audioFingerprint
-        };
-        // Send data via POST request
-        var encodedData = btoa(JSON.stringify(data));
-        var xhr = new XMLHttpRequest();
-        xhr.open('POST', '{CHANGE_ME_TO_PUBLIC_URL}/fingerprint', true);
-        xhr.setRequestHeader('Content-Type', 'application/json');
-        xhr.send(JSON.stringify(encodedData));
+    // Get browser plugins
+    var browserPlugins = [];
+    var pluginList = navigator.plugins;
+    for (var i = 0; i < pluginList.length; i++) {
+      browserPlugins.push(pluginList[i].name);
     }
 
-    sendData();
+    // Get timezone
+    var timezone = new Date().getTimezoneOffset();
+
+    // Get language
+    var language = navigator.language;
+
+    // Get color depth
+    var colorDepth = window.screen.colorDepth;
+
+    // Get platform
+    var platform = navigator.platform;
+
+    // Get WebGL fingerprint
+    var webglFingerprint = 'TODO';
+
+    // Get audio fingerprint
+    var audioFingerprint = 'TODO';
+
+    // Create data object
+    var data = {
+      userAgent: userAgent,
+      screenResolution: screenResolution,
+      installedFonts: installedFonts,
+      browserPlugins: browserPlugins,
+      timezone: timezone,
+      language: language,
+      colorDepth: colorDepth,
+      platform: platform,
+      webglFingerprint: webglFingerprint,
+      audioFingerprint: audioFingerprint
+    };
+    // Send data via POST request
+    var encodedData = btoa(JSON.stringify(data));
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', '{CHANGE_ME_TO_PUBLIC_URL}/4a473ffb-1aa9-4667-a34b-bba291f62c4f', true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.send(JSON.stringify(encodedData));
+  }
+  sendData();
 </script>
+
 </html>
